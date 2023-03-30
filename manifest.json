@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Bootstrap Academy Course Autocomplete",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": ["https://bootstrap.academy/courses/*"],
+            "js": ["script.js"]
+        }
+    ],
+    "action": {
+        "title": "Mark Course as complete",
+        "onclick": {
+            "type": "script",
+            "exec": "content.js"
+        }
+    }
+}
